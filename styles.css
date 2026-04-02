@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  margin-left: 178px;
+}
+input {
+  padding: 25px;
+  text-align: left;
+  font: normal normal normal 20px/91px Poppins;
+  letter-spacing: 0.8px;
+  color: #1e1c24d9;
+  opacity: 0.36;
+  border-radius: 100px;
+  width: 397px;
+  height: 77px;
+  box-sizing: border-box;
+}
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.title {
+  margin-top: 56px;
+  margin-right: 130px;
+  font: normal normal 900 30px/36px Rubik;
+  letter-spacing: 0px;
+  color: #1e1c24;
+  opacity: 1;
+  z-index: 50;
+}
+
+.button {
+  border-radius: 100px;
+  border: none;
+  letter-spacing: 0.92px;
+}
+.ghost {
+  outline: none;
+  border: 2px solid #fff;
+  color: #fff;
+  background: none;
+  font: normal normal normal 20px Poppins;
+  z-index: inherit;
+  width: 147px;
+  height: 58px;
+}
+.primary {
+  background: #0634ff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 30px 50px #0634ff57;
+  font: normal normal normal 23px Poppins;
+  opacity: 1;
+  width: 230px;
+  height: 77px;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.description {
+  text-align: left;
+  font: normal normal bold 75px/97px Rubik;
+  letter-spacing: -0.53px;
+  color: #1e1c24;
+  opacity: 1;
+  width: 702px;
+  height: 205px;
+  margin-top: 244px;
+}
+
+.description-subtext {
+  text-align: left;
+  font: normal normal normal 20px/35px Poppins;
+  letter-spacing: 0px;
+  color: #b1aaaa;
+  opacity: 1;
+  width: 616px;
+  height: 116px;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+.hero-blue-circle {
+  /* Layout Properties */
+  top: -846.0908203125px;
+  left: 960px;
+  width: 2429px;
+  height: 2429px;
+  position: absolute;
+  /* UI Properties */
+  background: url("assets/1.\ Hero/Hero_Shapes_1.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  z-index: 10;
+}
+
+.hero-yellow-circle {
+  /* Layout Properties */
+  top: -488.3934631347656px;
+  left: 1085px;
+  width: 2071px;
+  height: 2071px;
+  position: absolute;
+  /* UI Properties */
+  background: url("assets/1.\ Hero/Hero_Shapes_2.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  z-index: 10;
+}
+
+.hero-gray-circle {
+  /* Layout Properties */
+  top: -133.56918334960938px;
+  left: 1273px;
+  width: 1717px;
+  height: 1717px;
+  position: absolute;
+  /* UI Properties */
+  background: url("assets/1.\ Hero/Hero_Shapes_3.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  z-index: 10;
+}
