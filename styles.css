@@ -254,6 +254,7 @@ input {
   animation: heroCardSlideUp 0.6s ease forwards;
   animation-delay: 1.3s;
 }
+
 .heroCard2 {
   /* Layout Properties */
   top: 400px;
@@ -296,6 +297,15 @@ input {
   transform: translateY(60px);
   animation: heroCardSlideUp 0.6s ease forwards;
   animation-delay: 0.7s;
+}
+
+.hoverEffect {
+  transition: all 0.5s ease;
+}
+.hoverEffect:hover {
+  transition: all 0.5s ease;
+  scale: 105%;
+  z-index: 200;
 }
 
 .keyBenefits {
@@ -437,7 +447,7 @@ input {
 .signUp-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 🔥 ensures everything is centered */
+  align-items: center;
 }
 
 .textWrapper {
@@ -460,12 +470,12 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px; /* 🔥 replaces margin hacks */
+  gap: 24px;
   margin-top: 70px;
 }
 
 .inputRow input {
-  width: 400px; /* control width for proper centering */
+  width: 400px;
   padding: 14px 20px;
   border-radius: 999px;
   border: 1px solid #ccc;
