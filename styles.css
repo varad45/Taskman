@@ -505,8 +505,13 @@ input {
 .logoImage {
   filter: grayscale(100%);
   opacity: 0.5;
+  transition: all 0.7s ease-in;
 }
-
+.logoImage:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 1s ease;
+}
 .cnLogo {
   width: 97px;
   height: 59px;
