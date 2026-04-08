@@ -2,7 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 body {
   margin-left: 178px;
+  overflow-x: hidden;
 }
+
+/* /////////////////////////// */
+/* /////////////////////////// */
+/* UTIL */
+/* /////////////////////////// */
+/* /////////////////////////// */
+
 input {
   padding: 25px;
   text-align: left;
@@ -56,8 +64,20 @@ input {
   color: #fff;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .items-center {
@@ -67,6 +87,15 @@ input {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+/* /////////////////////////// */
+/* ////////////////////////// */
+/* INDIVIDUAL SECTION STYLES */
+/* //////////////////////// */
+/* /////////////////////// */
 .description {
   text-align: left;
   font: normal normal bold 75px/97px Rubik;
@@ -91,6 +120,63 @@ input {
 .justify-around {
   justify-content: space-around;
 }
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animateX {
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.animateX.visible {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.animateXY {
+  transform: translate(-900px, 600px);
+  transition: transform 1s ease;
+}
+
+.animateXY.visible {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.rotateIn {
+  transform-origin: top left;
+  rotate: -30deg;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.rotateIn.visible {
+  rotate: 0deg;
+  opacity: 1;
+}
+
+@keyframes slideX {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 .hero-blue-circle {
   /* Layout Properties */
   top: -846.0908203125px;
@@ -101,7 +187,10 @@ input {
   /* UI Properties */
   background: url("assets/1.\ Hero/Hero_Shapes_1.svg") 0% 0% no-repeat
     padding-box;
-  opacity: 1;
+  transform: translateX(100px);
+  opacity: 0;
+  animation: slideX 0.6s ease forwards;
+  animation-delay: 0s;
   z-index: 10;
 }
 
@@ -115,7 +204,10 @@ input {
   /* UI Properties */
   background: url("assets/1.\ Hero/Hero_Shapes_2.svg") 0% 0% no-repeat
     padding-box;
-  opacity: 1;
+  transform: translateX(150px);
+  opacity: 0;
+  animation: slideX 0.6s ease forwards;
+  animation-delay: 0.2s;
   z-index: 10;
 }
 
@@ -129,6 +221,347 @@ input {
   /* UI Properties */
   background: url("assets/1.\ Hero/Hero_Shapes_3.svg") 0% 0% no-repeat
     padding-box;
-  opacity: 1;
+  transform: translateX(200px);
+  opacity: 0;
+  animation: slideX 0.6s ease forwards;
+  animation-delay: 0.3s;
   z-index: 10;
+}
+
+@keyframes heroCardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroCard1 {
+  /* Layout Properties */
+  top: 252px;
+  left: 1167px;
+  width: 463px;
+  height: 370px;
+  position: absolute;
+  filter: drop-shadow(0px 20px 40px rgba(31, 48, 93, 0.25));
+  /* UI Properties */
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: heroCardSlideUp 0.6s ease forwards;
+  animation-delay: 1.3s;
+}
+.heroCard2 {
+  /* Layout Properties */
+  top: 400px;
+  left: 780px;
+  width: 1195.834px;
+  height: 656px;
+  position: absolute;
+  /* UI Properties */
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: heroCardSlideUp 0.6s ease forwards;
+  animation-delay: 1s;
+}
+.heroCard3 {
+  /* Layout Properties */
+  top: 560px;
+  left: 890px;
+  width: 784px;
+  height: 881.4px;
+  position: absolute;
+  /* UI Properties */
+  z-index: 70;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: heroCardSlideUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.heroCard4 {
+  /* Layout Properties */
+  top: 702px;
+  left: 1255px;
+  width: 832.17px;
+  height: 738.361px;
+  position: absolute;
+  /* UI Properties */
+  z-index: 80;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: heroCardSlideUp 0.6s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.keyBenefits {
+  margin-top: 240px;
+  width: 100%;
+  text-align: center;
+}
+
+.keyBenefits .text {
+  margin: auto;
+  width: 787px;
+  height: 132px;
+  margin-bottom: 100px;
+}
+.keyBenefits .keyBenefits {
+  width: 787px;
+  font: normal normal bold 50px/60px Rubik;
+  letter-spacing: 0px;
+  color: #1e1c24;
+  opacity: 1;
+}
+
+.benefitCard-wrapper {
+  gap: 200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.benefitCard {
+  width: 290px;
+}
+
+.track {
+  text-align: center;
+  font: normal normal bold 25px/60px Rubik;
+  letter-spacing: 0px;
+  color: #1e1c24;
+  opacity: 0;
+  margin: 0;
+  animation-delay: 0.1s;
+}
+
+.track-description {
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
+  font: normal normal normal 16px/26px Poppins;
+  letter-spacing: 0px;
+  color: #b1aaaa;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.whyEllipse {
+  top: -165px;
+  left: -900px;
+  width: 1274.827px;
+  height: 1274.827px;
+  background: url("./assets/4.\ Why/Why_Shapes_Ellipse.svg") 0% 0% no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+.whyBar {
+  rotate: 70deg;
+  width: 1202.706px;
+  height: 849.914px;
+  left: -700px;
+  top: -600px;
+  background: url("./assets/4.\ Why/Why_Shapes_Rectangle.svg") 0% 0% no-repeat;
+  background-size: contain;
+  opacity: 0;
+  z-index: 50;
+}
+.why1 {
+  top: -280px;
+  width: 855px;
+  height: 695px;
+  background: url("./assets/4.\ Why/Why_Illustration-1.svg") 0% 0% no-repeat;
+  background-size: contain;
+  z-index: 100;
+}
+
+.why2 {
+  top: -35px;
+  left: 262px;
+  width: 647px;
+  height: 740px;
+  background: url("./assets/4.\ Why/Why_Illustration-2.svg") 0% 0% no-repeat;
+  background-size: contain;
+  z-index: 100;
+}
+
+.why-text {
+  width: 552px;
+  margin-left: 913px;
+  margin-top: 332px;
+}
+.why-text p {
+  text-align: left;
+  font: normal normal bold 50px/60px Rubik;
+  letter-spacing: 0px;
+  color: #1e1c24;
+  opacity: 1;
+  margin: 0 0 15px 0;
+}
+.why-description {
+  margin-top: 15px;
+  text-align: left;
+  font: normal normal normal 18px/30px Poppins;
+  letter-spacing: 0px;
+  color: #b1aaaa;
+  opacity: 0;
+}
+
+.learn-more {
+  gap: 12px;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+.arrow-icon {
+  opacity: 0;
+}
+.learn-more span {
+  margin-top: 0;
+  text-align: left;
+  font: normal normal bold 18px/30px Poppins;
+  letter-spacing: 0px;
+  color: #1e1c24;
+  opacity: 1;
+}
+.signUp-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 593px 0 180px 0;
+}
+
+.signUp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 ensures everything is centered */
+}
+
+.textWrapper {
+  max-width: 552px;
+  text-align: center;
+}
+
+.signUp-section p {
+  font: normal normal bold 50px/60px Rubik;
+  color: #1e1c24;
+  margin: 0 0 10px 0;
+}
+
+.signup-subText {
+  font: normal normal normal 27px/35px Poppins;
+  color: #1e1c24;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* 🔥 replaces margin hacks */
+  margin-top: 70px;
+}
+
+.inputRow input {
+  width: 400px; /* control width for proper centering */
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}
+
+.final-shape {
+  transform: scaleX(-1);
+  width: 178px;
+  height: 500px;
+  right: -200px;
+  background: url("./assets/5.\ Signup/Signup_Shape.svg") 0% 0% no-repeat;
+  background-size: contain;
+  z-index: 100;
+}
+
+/* /////////////////// */
+/* ////////////////// */
+/*////// LOGOS ///// */
+/* //////////////// */
+/* ////////////////// */
+.logo-wrapper {
+  margin-top: 210px;
+  max-width: 780px;
+  gap: 75px;
+}
+
+.logoImage {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.cnLogo {
+  width: 97px;
+  height: 59px;
+  background: transparent url("./assets/2.\ Logos/Cartoon_Network_logo.svg") 0%
+    0% no-repeat;
+  background-size: contain;
+}
+
+.bookingLogo {
+  width: 262px;
+  height: 44px;
+  background: transparent url("./assets/2.\ Logos/Booking.com_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+.dropBoxLogo {
+  width: 229px;
+  height: 45px;
+  background: transparent url("./assets/2.\ Logos/Dropbox_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+
+.toshibaLogo {
+  width: 207px;
+  height: 32px;
+  background: transparent url("./assets/2.\ Logos/Toshiba_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+
+.slackLogo {
+  width: 156px;
+  height: 47px;
+  background: transparent url("./assets/2.\ Logos/Slack_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+
+.netflixLogo {
+  width: 142px;
+  height: 39px;
+  background: transparent url("./assets/2.\ Logos/Netflix_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+
+.spotifyLogo {
+  width: 189px;
+  height: 57px;
+  background: transparent url("./assets/2.\ Logos/Spotify_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+.cokeLogo {
+  width: 157px;
+  height: 51px;
+  background: transparent url("./assets/2.\ Logos/CocaCola_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
+}
+.redbullLogo {
+  width: 122px;
+  height: 74px;
+  background: transparent url("./assets/2.\ Logos/RedBull_logo.svg") 0% 0%
+    no-repeat;
+  background-size: contain;
 }

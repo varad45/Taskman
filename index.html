@@ -7,9 +7,36 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="hero-blue-circle"></div>
-    <div class="hero-yellow-circle"></div>
-    <div class="hero-gray-circle"></div>
+    <!-- <div class="scroll-container"></div> -->
+    <div class="">
+      <div class="hero-blue-circle"></div>
+      <div class="hero-yellow-circle"></div>
+      <div class="hero-gray-circle"></div>
+      <img
+        src="./assets/1. Hero/Hero_Illustration_Card-1.svg"
+        alt=""
+        srcset=""
+        class="heroCard1"
+      />
+
+      <img
+        src="./assets/1. Hero/Hero_Illustration_Card-2.svg"
+        alt=""
+        srcset=""
+        class="heroCard2"
+      /><img
+        src="./assets/1. Hero/Hero_Illustration_Card-3.svg"
+        alt=""
+        srcset=""
+        class="heroCard3"
+      />
+      <img
+        src="./assets/1. Hero/Hero_Illustration_Card-4.svg"
+        alt=""
+        srcset=""
+        class="heroCard4"
+      />
+    </div>
 
     <div class="title flex justify-between">
       <span> Taskman </span>
@@ -28,11 +55,129 @@
         humour.</span
       >
     </div>
-    <div class="flex">
-      <input type="email" name="company-email" placeholder="abc@jks.com" />
-      <button class="button primary" style="margin-left: 40px">
-        <span> Try for Free! </span>
-      </button>
+
+    <form id="couponForm ">
+      <div class="flex">
+        <input
+          type="email"
+          name="companyEmail"
+          id="companyEmail"
+          placeholder="abc@jks.com"
+        />
+        <button type="submit" class="button primary">
+          <span> Try for Free! </span>
+        </button>
+      </div>
+    </form>
+    <div class="flex flex-column logo-wrapper">
+      <div class="flex justify-between">
+        <div class="logoImage cnLogo"></div>
+        <div class="logoImage bookingLogo"></div>
+        <div class="logoImage dropBoxLogo"></div>
+      </div>
+      <div class="flex justify-between">
+        <div class="logoImage toshibaLogo"></div>
+        <div class="logoImage slackLogo"></div>
+        <div class="logoImage netflixLogo"></div>
+      </div>
+      <div class="flex justify-between">
+        <div class="logoImage spotifyLogo"></div>
+        <div class="logoImage cokeLogo"></div>
+        <div class="redbullLogo"></div>
+      </div>
     </div>
+    <div class="keyBenefits scroll-section">
+      <div class="text">
+        <span class="keyBenefits">
+          Key benefits of using task management software
+        </span>
+      </div>
+      <div class="flex benefitCard-wrapper scroll-section">
+        <div class="benefitCard">
+          <img
+            class="animate svg"
+            src="./assets/3. Benefits/Benefits_Icon_Track.svg"
+          />
+          <p class="track animate title">Keep tasks in one place</p>
+          <p class="track-description animate text">
+            Save time, avoid losing work and information, delegate, and track
+            tasks to stay on schedule
+          </p>
+        </div>
+
+        <div class="benefitCard">
+          <img
+            class="animate svg"
+            src="./assets/3. Benefits/Benefits_Icon_Priotitize.svg"
+          />
+          <p class="track animate title">Prioritize your work</p>
+          <p class="track-description animate text">
+            Tracking tasks allows everyone to understand which are more
+            important or require more time, so
+          </p>
+        </div>
+
+        <div class="benefitCard">
+          <img
+            class="animate svg"
+            src="./assets/3. Benefits/Benefits_Icon_Collaborate.svg"
+          />
+          <p class="track animate title">Improve collaboration</p>
+          <p class="track-description animate text">
+            Tracking tasks allows everyone to understand which are more
+            important or require more time, so
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="relative scroll-section">
+      <div class="absolute animateXY whyShape whyBar"></div>
+      <div class="absolute animateX whyShape whyEllipse"></div>
+      <div class="absolute animate whyCard why1"></div>
+      <div class="absolute animate whyCard why2"></div>
+      <div class="why-text">
+        <p>Why do you need task management software?</p>
+        <div class="animate why-description">
+          Do you waste time organizing sticky notes, searching your email and
+          apps for to-dos, and figuring out what to work on first? Then you need
+          one solution to prioritize your tasks, manage your time, and meet your
+          deadlines.
+        </div>
+        <div class="animate why-description learn-more flex items-center">
+          <span> LEARN MORE </span>
+          <img
+            class="arrow-icon animateX"
+            src="./assets/4. Why/Arrow_icon.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="signUp-wrapper relative scroll-section">
+      <div class="signUp-section">
+        <div class="textWrapper">
+          <p>Get better work done</p>
+          <span class="signup-subText">
+            See why millions of people across 195 countries use TaskMan.
+          </span>
+        </div>
+
+        <form id="couponForm">
+          <div class="inputRow final-email animate">
+            <input
+              type="email"
+              name="companyEmail"
+              id="companyEmail"
+              placeholder="abc@jks.com"
+            />
+            <button type="submit" class="button primary">
+              <span>Try for Free!</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="final-shape rotateIn absolute"></div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
